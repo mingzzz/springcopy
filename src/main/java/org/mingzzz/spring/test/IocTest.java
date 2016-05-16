@@ -1,10 +1,13 @@
 package org.mingzzz.spring.test;
 
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mingzzz.spring.po.User;
+import org.mingzzz.springcopy.factory.BeanDefinition;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
@@ -15,15 +18,16 @@ public class IocTest {
 
 	@Before
 	public void init(){
-		ac = new ClassPathXmlApplicationContext("/config/spring.xml");
-		 
+//		ac = new ClassPathXmlApplicationContext("/config/spring.xml");
 	}
 	
 	@Test
 	public void TestIoc(){
-		User user = (User) ac.getBean("user");
-		user.setUname("hello");
-		System.out.println(user.getUname());
+//		User user = (User) ac.getBean("user");
+//		user.setUname("hello");
+//		System.out.println(user.getUname());
 		ApplicationContext appContext = new FileSystemXmlApplicationContext("I:\\repositories-code\\myeclipse-java\\springcopy\\src\\main\\resources\\config\\spring.xml");
+		User user = null;
+		System.out.println("???");
 	}
 }
